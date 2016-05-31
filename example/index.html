@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Basic example</title>
+</head>
+<style>
+  .red {
+    background-color: red;
+  }
+</style>
+<body>
+
+  <div id="test-list">
+    <input type="text" class="fuzzy-search" />
+    <ul class="list">
+      <li><p class="name">Guybrush Threepwood</p></li>
+      <li><p class="name">Manny Calavera</p></li>
+      <li><p class="name">Bernard Bernoulli</p></li>
+      <li><p class="name">LeChuck</p></li>
+      <li><p class="name">Elaine Marley-Threepwood</p></li>
+      <li><p class="name">Purple Tentacle</p></li>
+      <li><p class="name">Adrian Ripburger</p></li>
+      <li><p class="name">Bobbin Threadbare</p></li>
+      <li><p class="name">Murray the Demonic Skull</p></li>
+      <li><p class="name">Zak McKracken</p></li>
+    </ul>
+  </div>
+
+  <script src="../../list.js/dist/list.js" ></script>
+  <script src="../dist/list.style.js" ></script>
+  <script>
+    var options = {
+      valueNames: ['name'],
+      plugins: [ ListStyle() ]
+    };
+    var monkeyList = new List('test-list', options);
+  </script>
+</body>
+</html>

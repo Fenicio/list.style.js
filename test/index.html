@@ -2,8 +2,8 @@
 <head>
     <meta charset="utf-8">
     <title>List.js Fuzzy Search Mocha Tests</title>
-    <link rel="stylesheet" href="../build/build.css" />
-    <style>
+ <link rel="stylesheet" href="../node_modules/grunt-mocha/node_modules/mocha/mocha.css" />
+     <style>
         #list,
         #parse-list,
         .list {
@@ -14,8 +14,11 @@
 <body>
 
     <div id="mocha"></div>
-    <script src="../build/build.js"></script>
-    <script src="mocha.js"></script> <!-- this specific version is needed for grunt-mocha (wtf...) -->
+ <div id="mocha"></div>
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../dist/list.js"></script>
+  <script src="../node_modules/expect.js/index.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js"></script>
     <script>
         var ListFuzzySearch = require('list.style.js'),
             List = require('list.js'),

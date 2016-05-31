@@ -1,0 +1,27 @@
+{
+  "name": "list.style.js",
+  "main": "dist/list.style.js",
+  "homepage": "http://",
+  "authors": [
+    "Guillermo G C <sirguiom@hotmail.com>"
+  ],
+  "description": "",
+  "keywords": [
+    "list",
+    "search",
+    "sort",
+    "table",
+    "dom",
+    "html",
+    "ui"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ]
+}
