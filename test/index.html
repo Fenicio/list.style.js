@@ -14,22 +14,15 @@
 <body>
 
     <div id="mocha"></div>
- <div id="mocha"></div>
-  <script src="../node_modules/jquery/dist/jquery.js"></script>
-  <script src="../dist/list.js"></script>
+ <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../../list.js/dist/list.js"></script>
+  <script src="..//dist/list.style.js"></script>
   <script src="../node_modules/expect.js/index.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js"></script>
-    <script>
-        var ListFuzzySearch = require('list.style.js'),
-            List = require('list.js'),
-            $ = require('jquery');
-        if (navigator.userAgent.indexOf('PhantomJS') < 0) {
-            // This version is needed to not get "Out of stack space" error in IE
-            require('mocha');
-        }
-        mocha.setup('bdd');
-        expect = require('expect.js');
-    </script>
+  <script src="../node_modules/grunt-mocha/node_modules/mocha/mocha.js"></script>
+
+  <script>
+    mocha.setup('bdd');
+  </script>
 
     <script src="fixtures.js"></script>
     <script src="test.default.js"></script>

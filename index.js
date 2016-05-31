@@ -1,7 +1,11 @@
+(function( window, undefined ) {
+"use strict";
+
+
 var classes = require('classes'),
     events = require('event');
 
-module.exports = function(options) {
+var ListStyle = function(options) {
   options = options || {};
 
   var list;
@@ -20,3 +24,10 @@ module.exports = function(options) {
     name: options.name || "style"
   };
 };
+
+if (typeof define === 'function' && define.amd) {
+  define(function () { return ListStyle; });
+}
+module.exports = ListStyle;
+window.ListStyle = ListStyle;
+});
