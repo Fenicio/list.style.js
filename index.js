@@ -1,25 +1,52 @@
 (function( window, undefined ) {
 "use strict";
 
-
 var classes = require('classes'),
-    events = require('event');
+    events = require('event'),
+    extend = require('extend');
 
 var ListStyle = function(options) {
-  options = options || {};
+  options = options || {
+    callback: function(item) {
+      return {};
+    }
+  };
+
+  extend({
+    callback: function(item) {
+      return {};
+    }
+  }, options);
 
   var list;
 
   var refresh = function() {
-    var item;
-    console.log(list);
-  };
+    var callback = options.callback;
+    list.visibleItems.forEach(function(e, i) {
+      var result = options.callback(e);
+      if(result === undefined) {
+        throw "Callback must return an object";
+      }
+      if(result.rowClass !== undefined) {
+        $(e.elm).addClass(result.rowClass);
+      }
+      list.valueNames.forEach(function(valueName) {
+        if(valueName && valueName!=="") {
+          if(result[valueName] !== undefined) {
+            $(e.elm).find('.'+valueName+'').addClass(result[valueName]);
+          }
+        }
+      });
 
+    });
+  };
 
   return {
     init: function(parentList) {
       list = parentList;
-      console.log("INIT");
+      list.on('updated', refresh);
+      refresh();
+      return;
     },
     name: options.name || "style"
   };
@@ -30,4 +57,4 @@ if (typeof define === 'function' && define.amd) {
 }
 module.exports = ListStyle;
 window.ListStyle = ListStyle;
-});
+})(window);

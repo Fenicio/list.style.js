@@ -5,7 +5,7 @@ var fixture = {
 
         item = "<li>";
         for (var i = 0; i < valueNames.length; i++) {
-            item += '<span class="'+valueNames[i]+'"</span>';
+            item += '<span class="'+valueNames[i]+'"></span>';
         }
         item += "</li>";
 
@@ -16,16 +16,16 @@ var fixture = {
     removeList: function() {
         $('#list').remove();
     },
-    i1: { name: "Guybrush Threepwood" },
-    i2: { name: "Manny Calavera" },
-    i3: { name: "Bernard Bernoulli" },
-    i4: { name: "LeChuck" },
-    i5: { name: "Elaine Marley-Threepwood" },
-    i6: { name: "Purple Tentacle" },
-    i7: { name: "Adrian Ripburger" },
-    i8: { name: "Bobbin Threadbare" },
-    i9: { name: "Murray the Demonic Skull" },
-    i10: { name: "Zak McKracken" }
+    i1: { name: "Guybrush Threepwood", born: 1769 },
+    i2: { name: "Manny Calavera", born: 1768 },
+    i3: { name: "Bernard Bernoulli", born: 1767 },
+    i4: { name: "LeChuck", born: 1766 },
+    i5: { name: "Elaine Marley-Threepwood", born: 1765 },
+    i6: { name: "Purple Tentacle", born: 1764 },
+    i7: { name: "Adrian Ripburger", born: 1763 },
+    i8: { name: "Bobbin Threadbare", born: 1762 },
+    i9: { name: "Murray the Demonic Skull", born: 1761 },
+    i10: { name: "Zak McKracken", born: 1760 }
 };
 fixture.all = [
     fixture.i1,
